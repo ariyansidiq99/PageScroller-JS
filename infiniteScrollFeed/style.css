@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8faff;
+    color: #0f172a;
+}
+.header {
+    background: white;
+    border-bottom: 1px solide #e2e8f0;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.header h1 {
+    font-size: 1.2rem;
+    color: #1a3faa;
+}
+.feed {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+.post {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    transition: box-shadow 200ms;
+}
+.post:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #eef2ff, #1a3faa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+.post-meta {
+    flex: 1;
+}
+.author-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0f172a;
+}
+.post-date {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+.post-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.post-body {
+    font-size: 0.875rem;
+    color: #475569;
+    line-height: 1.6;
+}
+.post-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+}
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #94a3b9;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 150ms;
+}
+.action-btn:hover {
+    color: #1a3faa;
+}
+.loader {
+    text-align: center;
+    padding: 32px;
+    color: #94a3b8;
+}
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #1a3faa;
+    border-radius: 50%;
+    animation: spin 700ms linear infinite;
+    margin: 0 auto 8px;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.end-message {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+.post {
+    opacity: 0;
+    transform: translateY((16px));
+    transition: opacity 400ms ease, transform 400ms ease;
+}
+.post.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

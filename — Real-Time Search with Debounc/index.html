@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>— Real-Time Search with Debounc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Music Serach</h1>
+    <p class="sub">Search any artist, song, or album. Results appear as you type.</p>
+    <div class="search-wrapper">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search for music..." autocomplete='off' aria-label='Search music' aria-autocomplete='list'>
+        <span class="search-icon">🔍</span>
+    </div>
+    <div class="results" id="results" role="listbox"></div>
+    <div class="recent" id="recentSection">
+        <h3>Recent Searches</h3>
+        <div class="resent-tags" id="recentTags"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
